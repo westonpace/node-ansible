@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "noImplicitAny": true,
+    "removeComments": true,
+    "sourceMap": true,
+    "module": "commonjs",
+    "experimentalDecorators": true,
+    "outDir": "out",
+    "types": ["node"]
+  },
+  "exclude": [
+    "out",
+    "node_modules",
+    "dist",
+    "reports"
+  ],
+  "version": "1.7.5"
+}
