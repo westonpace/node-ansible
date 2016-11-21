@@ -1,5 +1,5 @@
 import { EventEmitter } from 'events';
-import { Promise } from 'q';
+import * as Promise from 'bluebird';
 
 interface ExecOptions {
   buffered: boolean;

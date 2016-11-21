@@ -30,8 +30,9 @@
     "sinon-chai": "~2.4.0"
   },
   "dependencies": {
+    "@types/bluebird": "^3.0.35",
+    "bluebird": "^3.4.6",
     "mock-spawn": "^0.2.6",
-    "q": "~1.0.0",
     "underscore": "~1.5.2"
   }
 }
