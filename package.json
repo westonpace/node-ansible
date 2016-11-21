@@ -21,10 +21,12 @@
     "url": "https://github.com/shaharke/node-ansible/issues"
   },
   "devDependencies": {
-    "mocha": "~1.17.0",
+    "@types/node": "^6.0.49",
+    "@types/q": "0.0.32",
     "chai": "~1.8.1",
-    "sinon": "~1.7.3",
     "chai-as-promised": "~4.1.0",
+    "mocha": "~1.17.0",
+    "sinon": "~1.7.3",
     "sinon-chai": "~2.4.0"
   },
   "dependencies": {

@@ -11,9 +11,9 @@ interface ExecutionResult {
   output: string;
 }
 
-interface AbstractAnsibleCommand<T extends AbstractAnsibleCommand<T>> extends EventEmitter {
+declare abstract class AbstractAnsibleCommand<T extends AbstractAnsibleCommand<T>> extends EventEmitter {
 
-  exec(options: ExecOptions): Promise<ExecutionResult>;
+  exec(options?: ExecOptions): Promise<ExecutionResult>;
 
   forks(numberOfForks: number): T;
   verbose(verbosity: string): T;
@@ -26,7 +26,9 @@ interface AbstractAnsibleCommand<T extends AbstractAnsibleCommand<T>> extends Ev
 
 }
 
-export interface AdHoc extends AbstractAnsibleCommand<AdHoc> {
+export class AdHoc extends AbstractAnsibleCommand<AdHoc> {
+
+  constructor();
 
   module(module: string): AdHoc;
   args(args: any, freeform: any): AdHoc;
@@ -35,7 +37,9 @@ export interface AdHoc extends AbstractAnsibleCommand<AdHoc> {
 
 }
 
-export interface Playbook extends AbstractAnsibleCommand<Playbook> {
+export class Playbook extends AbstractAnsibleCommand<Playbook> {
+
+  constructor();
 
   askPass(): Playbook;
   askSudoPass(): Playbook;
